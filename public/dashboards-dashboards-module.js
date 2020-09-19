@@ -16932,6 +16932,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ActivityTypeService", function() { return ActivityTypeService; });
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _final_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./final.service */ "./src/app/services/application-setting/final.service.ts");
+
 
 
 
@@ -16942,10 +16944,11 @@ headers = headers
     .append('Content-Type', 'application/json')
     .append('Authorization', token);
 class ActivityTypeService {
-    constructor(http) {
+    constructor(http, final) {
         this.http = http;
-        this.postURL = 'https://assetcomply.thinkagainlab.com/api/v1/asset/createActivityType';
-        this.getURL = 'https://assetcomply.thinkagainlab.com/api/v1/asset/getActivitype';
+        this.final = final;
+        this.postURL = this.final.a + 'createActivityType';
+        this.getURL = this.final.a + 'getActivitype';
     }
     postData(data) {
         return this.http.post(this.postURL, data, { headers: headers });
@@ -16954,14 +16957,14 @@ class ActivityTypeService {
         return this.http.post(this.getURL, data, { headers: headers });
     }
 }
-ActivityTypeService.ɵfac = function ActivityTypeService_Factory(t) { return new (t || ActivityTypeService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"])); };
+ActivityTypeService.ɵfac = function ActivityTypeService_Factory(t) { return new (t || ActivityTypeService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_final_service__WEBPACK_IMPORTED_MODULE_2__["FinalService"])); };
 ActivityTypeService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({ token: ActivityTypeService, factory: ActivityTypeService.ɵfac, providedIn: 'root' });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](ActivityTypeService, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"],
         args: [{
                 providedIn: 'root',
             }]
-    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"] }]; }, null); })();
+    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"] }, { type: _final_service__WEBPACK_IMPORTED_MODULE_2__["FinalService"] }]; }, null); })();
 
 
 /***/ }),
@@ -16978,6 +16981,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AssetCategoryService", function() { return AssetCategoryService; });
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _final_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./final.service */ "./src/app/services/application-setting/final.service.ts");
+
 
 
 
@@ -16988,10 +16993,11 @@ headers = headers
     .append('Content-Type', 'application/json')
     .append('Authorization', token);
 class AssetCategoryService {
-    constructor(http) {
+    constructor(http, final) {
         this.http = http;
-        this.postURL = 'https://assetcomply.thinkagainlab.com/api/v1/asset/setproperty';
-        this.getURL = 'https://assetcomply.thinkagainlab.com/api/v1/asset/getAssetProperty';
+        this.final = final;
+        this.postURL = this.final.a + 'setproperty';
+        this.getURL = this.final.a + 'getAssetProperty';
     }
     postData(data) {
         return this.http.post(this.postURL, data, { headers: headers });
@@ -17000,14 +17006,14 @@ class AssetCategoryService {
         return this.http.post(this.getURL, data, { headers: headers });
     }
 }
-AssetCategoryService.ɵfac = function AssetCategoryService_Factory(t) { return new (t || AssetCategoryService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"])); };
+AssetCategoryService.ɵfac = function AssetCategoryService_Factory(t) { return new (t || AssetCategoryService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_final_service__WEBPACK_IMPORTED_MODULE_2__["FinalService"])); };
 AssetCategoryService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({ token: AssetCategoryService, factory: AssetCategoryService.ɵfac, providedIn: 'root' });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AssetCategoryService, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"],
         args: [{
                 providedIn: 'root',
             }]
-    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"] }]; }, null); })();
+    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"] }, { type: _final_service__WEBPACK_IMPORTED_MODULE_2__["FinalService"] }]; }, null); })();
 
 
 /***/ }),
@@ -17024,6 +17030,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BrandService", function() { return BrandService; });
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _final_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./final.service */ "./src/app/services/application-setting/final.service.ts");
+
 
 
 
@@ -17034,10 +17042,11 @@ headers = headers
     .append('Content-Type', 'application/json')
     .append('Authorization', token);
 class BrandService {
-    constructor(http) {
+    constructor(http, final) {
         this.http = http;
-        this.postURL = 'https://assetcomply.thinkagainlab.com/api/v1/asset/createBrand';
-        this.getURL = 'https://assetcomply.thinkagainlab.com/api/v1/asset/getBrand';
+        this.final = final;
+        this.postURL = this.final.a + 'createBrand';
+        this.getURL = this.final.a + 'getBrand';
     }
     postData(data) {
         return this.http.post(this.postURL, data, { headers: headers });
@@ -17046,14 +17055,14 @@ class BrandService {
         return this.http.post(this.getURL, data, { headers: headers });
     }
 }
-BrandService.ɵfac = function BrandService_Factory(t) { return new (t || BrandService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"])); };
+BrandService.ɵfac = function BrandService_Factory(t) { return new (t || BrandService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_final_service__WEBPACK_IMPORTED_MODULE_2__["FinalService"])); };
 BrandService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({ token: BrandService, factory: BrandService.ɵfac, providedIn: 'root' });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](BrandService, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"],
         args: [{
                 providedIn: 'root'
             }]
-    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"] }]; }, null); })();
+    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"] }, { type: _final_service__WEBPACK_IMPORTED_MODULE_2__["FinalService"] }]; }, null); })();
 
 
 /***/ }),
@@ -17070,6 +17079,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ModelService", function() { return ModelService; });
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _final_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./final.service */ "./src/app/services/application-setting/final.service.ts");
+
 
 
 
@@ -17080,10 +17091,11 @@ headers = headers
     .append('Content-Type', 'application/json')
     .append('Authorization', token);
 class ModelService {
-    constructor(http) {
+    constructor(http, final) {
         this.http = http;
-        this.postURL = 'https://assetcomply.thinkagainlab.com/api/v1/asset/createModel';
-        this.getURL = 'https://assetcomply.thinkagainlab.com/api/v1/asset/getModel';
+        this.final = final;
+        this.postURL = this.final.a + 'createModel';
+        this.getURL = this.final.a + 'getModel';
     }
     postData(data) {
         return this.http.post(this.postURL, data, { headers: headers });
@@ -17092,14 +17104,14 @@ class ModelService {
         return this.http.post(this.getURL, data, { headers: headers });
     }
 }
-ModelService.ɵfac = function ModelService_Factory(t) { return new (t || ModelService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"])); };
+ModelService.ɵfac = function ModelService_Factory(t) { return new (t || ModelService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_final_service__WEBPACK_IMPORTED_MODULE_2__["FinalService"])); };
 ModelService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({ token: ModelService, factory: ModelService.ɵfac, providedIn: 'root' });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](ModelService, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"],
         args: [{
                 providedIn: 'root',
             }]
-    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"] }]; }, null); })();
+    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"] }, { type: _final_service__WEBPACK_IMPORTED_MODULE_2__["FinalService"] }]; }, null); })();
 
 
 /***/ }),
@@ -17116,6 +17128,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MovementStatusService", function() { return MovementStatusService; });
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _final_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./final.service */ "./src/app/services/application-setting/final.service.ts");
+
 
 
 
@@ -17126,10 +17140,11 @@ headers = headers
     .append('Content-Type', 'application/json')
     .append('Authorization', token);
 class MovementStatusService {
-    constructor(http) {
+    constructor(http, final) {
         this.http = http;
-        this.postURL = 'https://assetcomply.thinkagainlab.com/api/v1/asset/createMovementStatus';
-        this.getURL = 'https://assetcomply.thinkagainlab.com/api/v1/asset/getmovestatus';
+        this.final = final;
+        this.postURL = this.final.a + 'createMovementStatus';
+        this.getURL = this.final.a + 'getmovestatus';
     }
     postData(data) {
         return this.http.post(this.postURL, data, { headers: headers });
@@ -17138,14 +17153,14 @@ class MovementStatusService {
         return this.http.post(this.getURL, data, { headers: headers });
     }
 }
-MovementStatusService.ɵfac = function MovementStatusService_Factory(t) { return new (t || MovementStatusService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"])); };
+MovementStatusService.ɵfac = function MovementStatusService_Factory(t) { return new (t || MovementStatusService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_final_service__WEBPACK_IMPORTED_MODULE_2__["FinalService"])); };
 MovementStatusService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({ token: MovementStatusService, factory: MovementStatusService.ɵfac, providedIn: 'root' });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](MovementStatusService, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"],
         args: [{
                 providedIn: 'root'
             }]
-    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"] }]; }, null); })();
+    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"] }, { type: _final_service__WEBPACK_IMPORTED_MODULE_2__["FinalService"] }]; }, null); })();
 
 
 /***/ }),
@@ -17162,6 +17177,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PurchaseOrderService", function() { return PurchaseOrderService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+/* harmony import */ var _final_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./final.service */ "./src/app/services/application-setting/final.service.ts");
+
 
 
 
@@ -17172,10 +17189,11 @@ headers = headers
     .append('Content-Type', 'application/json')
     .append('Authorization', token);
 class PurchaseOrderService {
-    constructor(http) {
+    constructor(http, final) {
         this.http = http;
-        this.postURL = 'https://assetcomply.thinkagainlab.com/api/v1/asset/createPurchaseOrder';
-        this.getURL = 'https://assetcomply.thinkagainlab.com/api/v1/asset/getPurchaseOrder';
+        this.final = final;
+        this.postURL = this.final.a + 'createPurchaseOrder';
+        this.getURL = this.final.a + 'getPurchaseOrder';
     }
     postData(data) {
         return this.http.post(this.postURL, data, { headers: headers });
@@ -17184,14 +17202,14 @@ class PurchaseOrderService {
         return this.http.post(this.getURL, data, { headers: headers });
     }
 }
-PurchaseOrderService.ɵfac = function PurchaseOrderService_Factory(t) { return new (t || PurchaseOrderService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"])); };
+PurchaseOrderService.ɵfac = function PurchaseOrderService_Factory(t) { return new (t || PurchaseOrderService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_final_service__WEBPACK_IMPORTED_MODULE_2__["FinalService"])); };
 PurchaseOrderService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: PurchaseOrderService, factory: PurchaseOrderService.ɵfac, providedIn: 'root' });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](PurchaseOrderService, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
         args: [{
                 providedIn: 'root',
             }]
-    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }]; }, null); })();
+    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }, { type: _final_service__WEBPACK_IMPORTED_MODULE_2__["FinalService"] }]; }, null); })();
 
 
 /***/ }),
@@ -17208,6 +17226,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StatusService", function() { return StatusService; });
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _final_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./final.service */ "./src/app/services/application-setting/final.service.ts");
+
 
 
 
@@ -17218,10 +17238,11 @@ headers = headers
     .append('Content-Type', 'application/json')
     .append('Authorization', token);
 class StatusService {
-    constructor(http) {
+    constructor(http, final) {
         this.http = http;
-        this.postURL = 'https://assetcomply.thinkagainlab.com/api/v1/asset/setStatus';
-        this.getURL = 'https://assetcomply.thinkagainlab.com/api/v1/asset/getAssetStatus';
+        this.final = final;
+        this.postURL = this.final.a + 'setStatus';
+        this.getURL = this.final.a + 'getAssetStatus';
     }
     postData(data) {
         return this.http.post(this.postURL, data, { headers: headers });
@@ -17230,14 +17251,14 @@ class StatusService {
         return this.http.post(this.getURL, data, { headers: headers });
     }
 }
-StatusService.ɵfac = function StatusService_Factory(t) { return new (t || StatusService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"])); };
+StatusService.ɵfac = function StatusService_Factory(t) { return new (t || StatusService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_final_service__WEBPACK_IMPORTED_MODULE_2__["FinalService"])); };
 StatusService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({ token: StatusService, factory: StatusService.ɵfac, providedIn: 'root' });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](StatusService, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"],
         args: [{
                 providedIn: 'root'
             }]
-    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"] }]; }, null); })();
+    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"] }, { type: _final_service__WEBPACK_IMPORTED_MODULE_2__["FinalService"] }]; }, null); })();
 
 
 /***/ }),
@@ -17254,6 +17275,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TaxSettingService", function() { return TaxSettingService; });
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _final_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./final.service */ "./src/app/services/application-setting/final.service.ts");
+
 
 
 
@@ -17264,10 +17287,11 @@ headers = headers
     .append('Content-Type', 'application/json')
     .append('Authorization', token);
 class TaxSettingService {
-    constructor(http) {
+    constructor(http, final) {
         this.http = http;
-        this.postURL = 'https://assetcomply.thinkagainlab.com/api/v1/asset/createTax';
-        this.getURL = 'https://assetcomply.thinkagainlab.com/api/v1/asset/getTax';
+        this.final = final;
+        this.postURL = this.final.a + 'createTax';
+        this.getURL = this.final.a + 'getTax';
     }
     postData(data) {
         return this.http.post(this.postURL, data, { headers: headers });
@@ -17276,14 +17300,14 @@ class TaxSettingService {
         return this.http.post(this.getURL, data, { headers: headers });
     }
 }
-TaxSettingService.ɵfac = function TaxSettingService_Factory(t) { return new (t || TaxSettingService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"])); };
+TaxSettingService.ɵfac = function TaxSettingService_Factory(t) { return new (t || TaxSettingService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_final_service__WEBPACK_IMPORTED_MODULE_2__["FinalService"])); };
 TaxSettingService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({ token: TaxSettingService, factory: TaxSettingService.ɵfac, providedIn: 'root' });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](TaxSettingService, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"],
         args: [{
                 providedIn: 'root'
             }]
-    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"] }]; }, null); })();
+    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"] }, { type: _final_service__WEBPACK_IMPORTED_MODULE_2__["FinalService"] }]; }, null); })();
 
 
 /***/ }),
@@ -17300,6 +17324,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UnitService", function() { return UnitService; });
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _final_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./final.service */ "./src/app/services/application-setting/final.service.ts");
+
 
 
 
@@ -17310,10 +17336,11 @@ headers = headers
     .append('Content-Type', 'application/json')
     .append('Authorization', token);
 class UnitService {
-    constructor(http) {
+    constructor(http, final) {
         this.http = http;
-        this.postURL = 'https://assetcomply.thinkagainlab.com/api/v1/asset/createUnit';
-        this.getURL = 'https://assetcomply.thinkagainlab.com/api/v1/asset/getunit';
+        this.final = final;
+        this.postURL = this.final.a + 'createUnit';
+        this.getURL = this.final.a + 'getunit';
     }
     postData(data) {
         return this.http.post(this.postURL, data, { headers: headers });
@@ -17322,14 +17349,14 @@ class UnitService {
         return this.http.post(this.getURL, data, { headers: headers });
     }
 }
-UnitService.ɵfac = function UnitService_Factory(t) { return new (t || UnitService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"])); };
+UnitService.ɵfac = function UnitService_Factory(t) { return new (t || UnitService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_final_service__WEBPACK_IMPORTED_MODULE_2__["FinalService"])); };
 UnitService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({ token: UnitService, factory: UnitService.ɵfac, providedIn: 'root' });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](UnitService, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"],
         args: [{
                 providedIn: 'root'
             }]
-    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"] }]; }, null); })();
+    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"] }, { type: _final_service__WEBPACK_IMPORTED_MODULE_2__["FinalService"] }]; }, null); })();
 
 
 /***/ }),
@@ -17346,6 +17373,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VendorService", function() { return VendorService; });
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _final_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./final.service */ "./src/app/services/application-setting/final.service.ts");
+
 
 
 
@@ -17356,10 +17385,11 @@ headers = headers
     .append('Content-Type', 'application/json')
     .append('Authorization', token);
 class VendorService {
-    constructor(http) {
+    constructor(http, final) {
         this.http = http;
-        this.postURL = 'https://assetcomply.thinkagainlab.com/api/v1/asset/createVendor';
-        this.getURL = 'https://assetcomply.thinkagainlab.com/api/v1/asset/getVendorCustomer';
+        this.final = final;
+        this.postURL = this.final.a + 'createVendor';
+        this.getURL = this.final.a + 'getVendorCustomer';
     }
     postData(data) {
         return this.http.post(this.postURL, data, { headers: headers });
@@ -17368,14 +17398,14 @@ class VendorService {
         return this.http.post(this.getURL, data, { headers: headers });
     }
 }
-VendorService.ɵfac = function VendorService_Factory(t) { return new (t || VendorService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"])); };
+VendorService.ɵfac = function VendorService_Factory(t) { return new (t || VendorService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_final_service__WEBPACK_IMPORTED_MODULE_2__["FinalService"])); };
 VendorService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({ token: VendorService, factory: VendorService.ɵfac, providedIn: 'root' });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](VendorService, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"],
         args: [{
                 providedIn: 'root'
             }]
-    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"] }]; }, null); })();
+    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"] }, { type: _final_service__WEBPACK_IMPORTED_MODULE_2__["FinalService"] }]; }, null); })();
 
 
 /***/ }),
@@ -17554,6 +17584,7 @@ class ActivityTypeComponent {
         this.getPOData();
     }
     onSubmit() {
+        console.log(this.form.value);
         this.form.value.username = localStorage.getItem('usr_name');
         if (this.form.valid) {
             this.atservice.postData(this.form.value).subscribe((data) => {
@@ -18681,6 +18712,168 @@ BrandComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCom
 
 /***/ }),
 
+/***/ "./src/app/views/app/dashboards/code/code.component.ts":
+/*!*************************************************************!*\
+  !*** ./src/app/views/app/dashboards/code/code.component.ts ***!
+  \*************************************************************/
+/*! exports provided: CodeComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CodeComponent", function() { return CodeComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _techiediaries_ngx_qrcode__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @techiediaries/ngx-qrcode */ "./node_modules/@techiediaries/ngx-qrcode/__ivy_ngcc__/fesm2015/techiediaries-ngx-qrcode.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+
+
+
+
+
+
+const _c0 = ["form"];
+function CodeComponent_div_15_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Name is required! ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function CodeComponent_div_22_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Email is required! ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function CodeComponent_div_29_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Phone Number is required! ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+function CodeComponent_div_36_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Address is required! ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+class CodeComponent {
+    constructor() {
+        this.columns = [
+            { prop: 'name', name: 'Name' },
+            { prop: 'email', name: 'Email' },
+            { prop: 'phn', name: 'Phone Number' },
+            { prop: 'address', name: 'Address' },
+        ];
+        this.elementType = _techiediaries_ngx_qrcode__WEBPACK_IMPORTED_MODULE_1__["NgxQrcodeElementTypes"].URL;
+        this.correctionLevel = _techiediaries_ngx_qrcode__WEBPACK_IMPORTED_MODULE_1__["NgxQrcodeErrorCorrectionLevels"].HIGH;
+        this.result = " ";
+    }
+    gen(data) {
+        console.log(this.form.value);
+        this.result = data.name + " " + data.email + " " + data.phn + " " + data.address;
+        console.log(this.result);
+    }
+    ngOnInit() {
+    }
+}
+CodeComponent.ɵfac = function CodeComponent_Factory(t) { return new (t || CodeComponent)(); };
+CodeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: CodeComponent, selectors: [["app-code"]], viewQuery: function CodeComponent_Query(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵviewQuery"](_c0, true);
+    } if (rf & 2) {
+        var _t;
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵloadQuery"]()) && (ctx.form = _t.first);
+    } }, decls: 43, vars: 7, consts: [[1, "row"], [1, "col-12"], [1, "card", "mb-4"], [1, "card-body"], [1, "mb-4"], ["novalidate", "", 1, "tooltip-label-right", 3, "ngSubmit"], ["form", "ngForm"], [1, "col-12", "col-lg-6"], [1, "form-group", "error-l-50"], ["type", "text", "name", "name", "ngModel", "", "required", "", 1, "form-control"], ["name", "ngModel"], ["class", "invalid-tooltip", 4, "ngIf"], ["type", "text", "name", "email", "ngModel", "", "required", "", 1, "form-control"], ["email", "ngModel"], ["type", "text", "name", "phn", "ngModel", "", "required", "", 1, "form-control"], ["phn", "ngModel"], ["type", "text", "name", "address", "ngModel", "", "required", "", 1, "form-control"], ["address", "ngModel"], [1, "col-12", "mt-2"], ["alt", "Demo QR Code", "cssClass", "bshadow", 3, "elementType", "errorCorrectionLevel", "value"], ["type", "reset", 1, "btn", "btn-light", "mr-2"], ["type", "submit", 1, "btn", "btn-primary"], [1, "invalid-tooltip"]], template: function CodeComponent_Template(rf, ctx) { if (rf & 1) {
+        const _r9 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "h5", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "QR Code Generation");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "form", 5, 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngSubmit", function CodeComponent_Template_form_ngSubmit_6_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r9); const _r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](7); return ctx.gen(_r0.value); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "div", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "div", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "Name");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](13, "input", 9, 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](15, CodeComponent_div_15_Template, 2, 0, "div", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "div", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "div", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19, "Email");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](20, "input", 12, 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](22, CodeComponent_div_22_Template, 2, 0, "div", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "div", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "div", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](26, "Phone Number");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](27, "input", 14, 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](29, CodeComponent_div_29_Template, 2, 0, "div", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "div", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "div", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, "Address");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](34, "input", 16, 17);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](36, CodeComponent_div_36_Template, 2, 0, "div", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "div", 18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](38, "ngx-qrcode", 19);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "button", 20);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](40, "Cancel");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "button", 21);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](42, " Generate ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    } if (rf & 2) {
+        const _r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](7);
+        const _r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](14);
+        const _r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](21);
+        const _r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](28);
+        const _r7 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](35);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !_r1.valid && _r0.submitted);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !_r3.valid && _r0.submitted);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !_r5.valid && _r0.submitted);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !_r7.valid && _r0.submitted);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("elementType", ctx.elementType)("errorCorrectionLevel", ctx.correctionLevel)("value", ctx.result);
+    } }, directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgForm"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgModel"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["RequiredValidator"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], _techiediaries_ngx_qrcode__WEBPACK_IMPORTED_MODULE_1__["QrcodeComponent"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3ZpZXdzL2FwcC9kYXNoYm9hcmRzL2NvZGUvY29kZS5jb21wb25lbnQuc2NzcyJ9 */"] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](CodeComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'app-code',
+                templateUrl: './code.component.html',
+                styleUrls: ['./code.component.scss']
+            }]
+    }], function () { return []; }, { form: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
+            args: ['form']
+        }] }); })();
+
+
+/***/ }),
+
 /***/ "./src/app/views/app/dashboards/condition-settings/condition-settings.component.ts":
 /*!*****************************************************************************************!*\
   !*** ./src/app/views/app/dashboards/condition-settings/condition-settings.component.ts ***!
@@ -18862,6 +19055,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ngx_bootstrap_pagination__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ngx-bootstrap/pagination */ "./node_modules/ngx-bootstrap/__ivy_ngcc__/pagination/fesm2015/ngx-bootstrap-pagination.js");
 /* harmony import */ var src_app_containers_pages_pages_containers_module__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! src/app/containers/pages/pages.containers.module */ "./src/app/containers/pages/pages.containers.module.ts");
 /* harmony import */ var ngx_bootstrap_collapse__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ngx-bootstrap/collapse */ "./node_modules/ngx-bootstrap/__ivy_ngcc__/collapse/fesm2015/ngx-bootstrap-collapse.js");
+/* harmony import */ var _code_code_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./code/code.component */ "./src/app/views/app/dashboards/code/code.component.ts");
+/* harmony import */ var _techiediaries_ngx_qrcode__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! @techiediaries/ngx-qrcode */ "./node_modules/@techiediaries/ngx-qrcode/__ivy_ngcc__/fesm2015/techiediaries-ngx-qrcode.js");
+
+
 
 
 
@@ -18899,7 +19096,7 @@ class DashboardsModule {
 }
 DashboardsModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({ type: DashboardsModule });
 DashboardsModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function DashboardsModule_Factory(t) { return new (t || DashboardsModule)(); }, imports: [[
-            src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_3__["SharedModule"],
+            src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_3__["SharedModule"], _techiediaries_ngx_qrcode__WEBPACK_IMPORTED_MODULE_31__["NgxQRCodeModule"],
             src_app_containers_layout_layout_containers_module__WEBPACK_IMPORTED_MODULE_6__["LayoutContainersModule"],
             src_app_containers_dashboards_dashboards_containers_module__WEBPACK_IMPORTED_MODULE_4__["DashboardsContainersModule"],
             _dashboards_routing__WEBPACK_IMPORTED_MODULE_2__["DashboardsRoutingModule"],
@@ -18928,7 +19125,8 @@ DashboardsModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineI
         _unit_unit_component__WEBPACK_IMPORTED_MODULE_21__["UnitComponent"],
         _address_address_component__WEBPACK_IMPORTED_MODULE_22__["AddressComponent"],
         _status_status_component__WEBPACK_IMPORTED_MODULE_23__["StatusComponent"],
-        _department_department_component__WEBPACK_IMPORTED_MODULE_24__["DepartmentComponent"]], imports: [src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_3__["SharedModule"],
+        _department_department_component__WEBPACK_IMPORTED_MODULE_24__["DepartmentComponent"],
+        _code_code_component__WEBPACK_IMPORTED_MODULE_30__["CodeComponent"]], imports: [src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_3__["SharedModule"], _techiediaries_ngx_qrcode__WEBPACK_IMPORTED_MODULE_31__["NgxQRCodeModule"],
         src_app_containers_layout_layout_containers_module__WEBPACK_IMPORTED_MODULE_6__["LayoutContainersModule"],
         src_app_containers_dashboards_dashboards_containers_module__WEBPACK_IMPORTED_MODULE_4__["DashboardsContainersModule"],
         _dashboards_routing__WEBPACK_IMPORTED_MODULE_2__["DashboardsRoutingModule"],
@@ -18957,10 +19155,11 @@ DashboardsModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineI
                     _unit_unit_component__WEBPACK_IMPORTED_MODULE_21__["UnitComponent"],
                     _address_address_component__WEBPACK_IMPORTED_MODULE_22__["AddressComponent"],
                     _status_status_component__WEBPACK_IMPORTED_MODULE_23__["StatusComponent"],
-                    _department_department_component__WEBPACK_IMPORTED_MODULE_24__["DepartmentComponent"]
+                    _department_department_component__WEBPACK_IMPORTED_MODULE_24__["DepartmentComponent"],
+                    _code_code_component__WEBPACK_IMPORTED_MODULE_30__["CodeComponent"],
                 ],
                 imports: [
-                    src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_3__["SharedModule"],
+                    src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_3__["SharedModule"], _techiediaries_ngx_qrcode__WEBPACK_IMPORTED_MODULE_31__["NgxQRCodeModule"],
                     src_app_containers_layout_layout_containers_module__WEBPACK_IMPORTED_MODULE_6__["LayoutContainersModule"],
                     src_app_containers_dashboards_dashboards_containers_module__WEBPACK_IMPORTED_MODULE_4__["DashboardsContainersModule"],
                     _dashboards_routing__WEBPACK_IMPORTED_MODULE_2__["DashboardsRoutingModule"],
@@ -19009,6 +19208,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _address_address_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./address/address.component */ "./src/app/views/app/dashboards/address/address.component.ts");
 /* harmony import */ var _status_status_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./status/status.component */ "./src/app/views/app/dashboards/status/status.component.ts");
 /* harmony import */ var _item_item_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../../item/item.component */ "./src/app/item/item.component.ts");
+/* harmony import */ var src_app_scanner_scan_scan_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! src/app/scanner/scan/scan.component */ "./src/app/scanner/scan/scan.component.ts");
+/* harmony import */ var _code_code_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./code/code.component */ "./src/app/views/app/dashboards/code/code.component.ts");
+
+
 
 
 
@@ -19055,6 +19258,8 @@ const routes = [
             { path: 'address', component: _address_address_component__WEBPACK_IMPORTED_MODULE_16__["AddressComponent"] },
             { path: 'status', component: _status_status_component__WEBPACK_IMPORTED_MODULE_17__["StatusComponent"] },
             { path: 'item', component: _item_item_component__WEBPACK_IMPORTED_MODULE_18__["ItemComponent"] },
+            { path: 'scan', component: src_app_scanner_scan_scan_component__WEBPACK_IMPORTED_MODULE_19__["ScanComponent"] },
+            { path: 'code', component: _code_code_component__WEBPACK_IMPORTED_MODULE_20__["CodeComponent"] },
         ],
     },
 ];

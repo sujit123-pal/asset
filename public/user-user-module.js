@@ -447,7 +447,7 @@ class RegisterComponent {
                 this.buttonState = '';
             }
         }, (err) => {
-            this.notifications.create('Error', 'Registrayion failed, due to unknown error.', angular2_notifications__WEBPACK_IMPORTED_MODULE_1__["NotificationType"].Error, { theClass: 'outline danger', timeOut: 6000, showProgressBar: false });
+            this.notifications.create('Error', 'Registration failed, due to unknown error.', angular2_notifications__WEBPACK_IMPORTED_MODULE_1__["NotificationType"].Error, { theClass: 'outline danger', timeOut: 6000, showProgressBar: false });
             this.buttonDisabled = false;
             this.buttonState = '';
         });
